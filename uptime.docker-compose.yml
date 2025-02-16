@@ -1,0 +1,15 @@
+services:
+  uptime:
+    image: louislam/uptime-kuma:latest
+    container_name: uptime-kuma
+    restart: always
+    volumes:
+      - uptime-kuma-data:/app/data
+
+volumes:
+  uptime-kuma-data: {}
+
+networks:
+  default:
+    external: true
+    name: scoobydoo
